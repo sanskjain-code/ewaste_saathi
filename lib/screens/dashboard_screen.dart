@@ -132,7 +132,7 @@ class DashboardScreen extends StatelessWidget {
                 ],
               ),
 
-              const SizedBox(height: 22),
+              const SizedBox(height: 26),
 
               // SECTION 1: MAIN ACTION CARDS
               const Text(
@@ -150,7 +150,10 @@ class DashboardScreen extends StatelessWidget {
                 title: 'Naya E-Waste Lot Banayein',
                 subtitle: 'Aaj ka collected e-waste add karein',
                 isProminent: true,
-                iconWidget: const Text('📦', style: TextStyle(fontSize: 28)),
+                iconWidget: const Icon(
+                  Icons.add_box_rounded,
+                  size: 30,
+                ),
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
@@ -164,7 +167,10 @@ class DashboardScreen extends StatelessWidget {
               ActionCard(
                 title: 'Mere Transactions',
                 subtitle: 'Purane collection aur payments dekhein',
-                iconWidget: const Text('📋', style: TextStyle(fontSize: 26)),
+                iconWidget: const Icon(
+                  Icons.receipt_long_rounded,
+                  size: 28,
+                ),
                 onTap: () => onTabChange(2), // Switch to Transactions tab
               ),
 
@@ -172,7 +178,10 @@ class DashboardScreen extends StatelessWidget {
               ActionCard(
                 title: 'Authorized Recycler Dhundhein',
                 subtitle: 'Apne paas ke recycler se connect karein',
-                iconWidget: const Text('♻️', style: TextStyle(fontSize: 26)),
+                iconWidget: const Icon(
+                  Icons.recycling_rounded,
+                  size: 28,
+                ),
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
@@ -187,12 +196,12 @@ class DashboardScreen extends StatelessWidget {
 
               // SECTION 2: COLLECTION SUMMARY SECTION
               const Text(
-                'Collection Summary',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.textDark,
-                ),
+                'Aaj ka  Performance',
+                 style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.textDark,
+                 ),
               ),
               const SizedBox(height: 12),
 
